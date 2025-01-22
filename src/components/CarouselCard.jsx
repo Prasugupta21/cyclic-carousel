@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaArrowRight } from "react-icons/fa6";
 const CarouselCard = ({ item, index, isActive, handleClick }) => {
   return (
     <div
@@ -46,7 +46,17 @@ const CarouselCard = ({ item, index, isActive, handleClick }) => {
           className="w-full h-full object-cover hover:scale-110 hover:-rotate-6 transition-all duration-1000"
         />
         
-       
+        <div className="absolute bottom-0 left-0 p-2 w-full">
+          <p className="text-white font-bold text-2xl tracking-wide   translate-x-0 translate-y-10 opacity-0 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100 transition-all duration-1000">
+            Pants
+          </p>
+        </div>
+        <div className="absolute bottom-0 right-0 p-2">
+          <FaArrowRight className="text-white text-xl font-semibold translate-x-0 translate-y-10 opacity-0 group-hover:-translate-x-6 group-hover:-translate-y-6 group-hover:opacity-100 transition-all duration-1000"/>
+            
+         
+          
+        </div>
       </div>
     </div>
   );

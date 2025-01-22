@@ -5,7 +5,7 @@ const CarouselContainer = ({ children, scrollRef, handleScroll }) => {
       <div className="w-full overflow-hidden bg-gray-50">
         <div 
           ref={scrollRef}
-          className="flex overflow-x-scroll no-scrollbar py-12 gap-x-48"
+          className="flex overflow-x-scroll no-scrollbar py-12 gap-x-40"
           onScroll={handleScroll}
           style={{ scrollBehavior: 'smooth' }}
         >

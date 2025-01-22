@@ -1,8 +1,44 @@
-# React + Vite
+# Infinite Scrolling Carousel with Animated Borders
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React-based carousel component** with an infinite scrolling effect and a border animation to highlight the active card. It’s built using **TailwindCSS** for styling and offers a smooth, visually appealing user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Infinite Scrolling**: Seamlessly loops through carousel items.
+- **Animated Borders**: Active card features a glowing border animation.
+- **Image Rotation with Transition**: Smooth rotation effect on hover.
+- **Text Transition on Hover** : Smooth Text transition on hover.
+
+
+
+
+
+## Installation
+
+### Clone the Repository
+```bash
+git clone https://github.com/Prasugupta21/cyclic-carousel.git
+```
+
+### Navigate to project directory
+```bash
+cd techo-assignment2
+```
+
+### Install Depedencies
+```bash
+npm install
+```
+
+### Run Application
+```bash
+npm run dev
+```
+
+### Open Browser 
+  ####  http://localhost:5173
+
+
+

@@ -57,5 +57,33 @@ export const useCarousel = (baseItems) => {
     }
   };
 
-  return { scrollRef, activeCard, items, handleScroll };
+  const handleCardClick = (index) => {
+    // Toggle active card state
+    setActiveCard(activeCard === index ? null : index);
+    
+    if (scrollRef.current) {
+      const container = scrollRef.current;
+      const card = container.children[index + 1]; // +1 for padding div
+      if (!card) return;
+
+      // Calculate center position
+      const containerWidth = container.offsetWidth;
+      const cardWidth = card.offsetWidth;
+      const scrollTo = card.offsetLeft - (containerWidth / 2) + (cardWidth / 2);
+      
+      // Smoothly scroll to center the card
+      container.scrollTo({
+        left: scrollTo,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  return {
+    scrollRef,
+    activeCard,
+    items,
+    handleScroll,
+    handleCardClick
+  };
 };

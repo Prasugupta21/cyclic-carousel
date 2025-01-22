@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -29,19 +30,34 @@ const CarouselCard = ({ item, index, isActive, handleClick }) => {
           shadow-lg
         "
       >
+        {/* Triple diagonal shine effect */}
+        <div className="
+          absolute 
+          inset-0 
+          w-full 
+          h-full 
+          opacity-0 
+          group-hover:opacity-100 
+          z-20 
+          overflow-hidden
+          pointer-events-none
+          before:absolute
+          before:content-['']
+          before:top-0
+          before:left-[-75%]
+          before:w-[200%]
+          before:h-[200%]
+          before:bg-[linear-gradient(135deg,transparent_10%,rgba(255,255,255,0)_20%,rgba(255,255,255,0.9)_25%,transparent_30%,transparent_35%,rgba(255,255,255,0.9)_40%,transparent_45%,transparent_50%,rgba(255,255,255,0.9)_55%,transparent_60%)]
+          before:group-hover:animate-shine
+          before:-skew-x-45
+        "/>
+
         {/* Animated borders */}
         <div className="absolute inset-0 w-full h-full rounded-2xl opacity-0 group-hover:opacity-100 z-10">
           <div className="absolute inset-0 w-full h-full rounded-2xl">
-            {/* Top border */}
-            <div className="absolute top-0 left-0 w-full h-[5px] bg-gradient-to-r  from-transparent via-white to-transparent group-hover:animate-border-slide-right" />
-            
-            {/* Right border */}
+            <div className="absolute top-0 left-0 w-full h-[5px] bg-gradient-to-r from-transparent via-white to-transparent group-hover:animate-border-slide-right" />
             <div className="absolute top-0 right-0 w-[5px] h-full bg-gradient-to-b from-transparent via-white to-transparent group-hover:animate-border-slide-down" />
-            
-            {/* Bottom border */}
             <div className="absolute bottom-0 left-0 w-full h-[5px] bg-gradient-to-l from-transparent via-white to-transparent group-hover:animate-border-slide-left" />
-            
-            {/* Left border */}
             <div className="absolute top-0 left-0 w-[5px] h-full bg-gradient-to-t from-transparent via-white to-transparent group-hover:animate-border-slide-up" />
           </div>
         </div>

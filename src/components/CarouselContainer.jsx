@@ -14,7 +14,15 @@ const CarouselContainer = ({ children, scrollRef, handleScroll }) => {
           <div className="flex-shrink-0 w-[calc(50vw-180px)]" />
         </div>
   
-       
+        <style jsx>{`
+          .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </div>
     );
   };
